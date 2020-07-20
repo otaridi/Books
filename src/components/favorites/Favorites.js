@@ -14,7 +14,6 @@ const Favorites = () => {
             <Card
               key={el.id}
               bookImage={el.volumeInfo.imageLinks.smallThumbnail}
-              // buyLInk={el.saleInfo.buyLink}
               el={el}
             />
           );

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const navbarRef = useRef();
@@ -44,7 +44,8 @@ const Navbar = () => {
       <section>
         <img
           className='section-image'
-          src='https://www.incimages.com/uploaded_files/image/1920x1080/getty_883231284_200013331818843182490_335833.jpg'
+          src='https://cdn.accentuate.io/51528957999/4528701440047/Classics-Final.jpg?1400x500'
+          alt='image'
         />
       </section>
     </>

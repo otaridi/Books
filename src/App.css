@@ -7,8 +7,8 @@
 body {
   /* font-family: 'Domine', serif; */
 }
-/* NAVBAR */
 
+/* NAVBAR */
 .nav-container {
   position: fixed;
   display: flex;
@@ -67,7 +67,7 @@ body {
 section {
   width: 96%;
   margin: auto;
-  margin-top: 51px;
+  margin-top: 50px;
 }
 .section-image {
   width: 100%;
@@ -81,7 +81,7 @@ section {
   width: 80%;
   margin-left: 10%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
 }
 /* CARD */

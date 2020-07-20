@@ -1,20 +1,26 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+// import CardDetails from '../CardDetails';
 
 const Card = (props) => {
   const [fav, setFav] = useState(true);
+  const [addFav, setAddFav] = useState([]);
   const dispatch = useDispatch();
-  // const favorites = useSelector((state) => state.favorites);
-  // console.log(favorites);
-  const cklickFavBtn = (e) => {
+  const favorites = useSelector((state) => state.items);
+  // console.log('fav', favorites);
+  const addFavBtn = (e) => {
     e.persist();
     dispatch({ type: 'ADD', payload: props.el });
     setFav(!fav);
+    console.log(favorites);
+    // setAddFav()
   };
+
   return (
     <div className='card-container'>
       <img src={props.bookImage} alt='book' className='book-image' />
-      {fav ? <button onClick={cklickFavBtn}>add</button> : <h1>???</h1>}
+      {fav ? <button onClick={addFavBtn}>add</button> : <h3>added</h3>}
+      {/* <CardDetails /> */}
     </div>
   );
 };
