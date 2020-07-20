@@ -14,10 +14,11 @@ const Favorites = () => {
             return (
               <div key={el.id}>
                 <Card
+                  id={el.id}
                   bookImage={el.volumeInfo.imageLinks.smallThumbnail}
                   el={el}
                 />
-                <CardDetails id={el.id} />
+                {/* <CardDetails id={el.id} /> */}
               </div>
             );
           }

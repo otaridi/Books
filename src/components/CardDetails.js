@@ -6,14 +6,13 @@ const CardDetails = (props) => {
   // hook for favorite button
   const [fav, setFav] = useState(true);
   const dispatch = useDispatch();
-  const btnLogic = useSelector((state) => state.btn);
+  const favorite = useSelector((state) => state.favorites);
   const addFavBtn = (e) => {
     e.preventDefault();
     dispatch({ type: 'ADD', payload: props.id });
     setFav(!fav);
   };
   const removeBtn = (e) => {
-    console.log('remove');
     dispatch({ type: 'REMOVE', payload: props.id });
     setFav(!fav);
   };
@@ -23,8 +22,11 @@ const CardDetails = (props) => {
 
   return (
     <div>
-      <button onClick={addFavBtn}>add</button>
-      <button onClick={removeBtn}>remove</button>
+      {!favorite.includes(props.id) ? (
+        <button onClick={addFavBtn}>add</button>
+      ) : (
+        <button onClick={removeBtn}>remove</button>
+      )}
       <NavLink
         to={{ pathname: '/details', state: { id: props.id } }}
         exact={true}

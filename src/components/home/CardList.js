@@ -13,7 +13,7 @@ const CardList = ({ bookData }) => {
               bookImage={el.volumeInfo.imageLinks.smallThumbnail}
               el={el}
             />
-            <CardDetails id={el.id} />
+            {/* <CardDetails id={el.id} /> */}
           </div>
         );
       })}

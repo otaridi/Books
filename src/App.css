@@ -34,7 +34,7 @@ body {
 .nav-ul > li {
   list-style: none;
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-transform: uppercase;
   /* background-color: red; */
 }
@@ -99,6 +99,12 @@ section {
   padding-top: 20px;
   display: block;
   /* width: 100%; */
+}
+/* card details */
+.card-details {
+  height: 40px;
+  margin-top: 40px;
+  border: 1px solid rgb(175, 165, 165);
 }
 /* detail page */
 .detail-container {
