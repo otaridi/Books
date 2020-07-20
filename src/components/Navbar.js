@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { BrowserRouter as Router, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const navbarRef = useRef();
@@ -45,7 +45,7 @@ const Navbar = () => {
         <img
           className='section-image'
           src='https://cdn.accentuate.io/51528957999/4528701440047/Classics-Final.jpg?1400x500'
-          alt='image'
+          alt='i'
         />
       </section>
     </>
