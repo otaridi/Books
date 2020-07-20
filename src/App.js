@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CardList from './components/home/CardList';
 import Favorites from './components/favorites/Favorites';
+import Details from './components/details/Details';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -35,6 +36,7 @@ const App = () => {
             render={(props) => <CardList {...props} bookData={bookData} />}
           />
           <Route path='/favorites' exact component={Favorites} />
+          <Route path='/details' exact component={Details} />
         </main>
         <Footer />
       </div>
