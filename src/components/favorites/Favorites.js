@@ -5,7 +5,6 @@ import CardDetails from '../CardDetails';
 
 const Favorites = () => {
   const favorites = useSelector((state) => state.favorites);
-  console.log(favorites.id);
   const bookData = useSelector((state) => state.items);
   return (
     <div>
@@ -13,13 +12,12 @@ const Favorites = () => {
         {bookData.map((el) => {
           if (favorites.includes(el.id)) {
             return (
-              <div>
+              <div key={el.id}>
                 <Card
-                  key={el.id}
                   bookImage={el.volumeInfo.imageLinks.smallThumbnail}
                   el={el}
                 />
-                <CardDetails />
+                <CardDetails id={el.id} />
               </div>
             );
           }

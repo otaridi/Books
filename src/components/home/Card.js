@@ -1,5 +1,4 @@
 import React from 'react';
-import CardDetails from '../CardDetails';
 
 const Card = (props) => {
   return (

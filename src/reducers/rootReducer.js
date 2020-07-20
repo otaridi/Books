@@ -17,6 +17,13 @@ function rootReducer(state = initialState, action) {
           .concat(action.payload)
           .filter((item, pos, arr) => arr.indexOf(item) === pos),
       };
+    case 'REMOVE':
+      return {
+        items: state.items,
+        favorites: state.favorites
+          .concat(action.payload)
+          .filter((el) => el !== action.payload),
+      };
     default:
       return state;
   }

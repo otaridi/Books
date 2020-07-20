@@ -100,7 +100,20 @@ section {
   display: block;
   /* width: 100%; */
 }
-
+/* detail page */
+.detail-container {
+  width: 80%;
+  margin-top: 30px;
+  margin-left: 10%;
+  border: 0.5px solid rgb(221, 215, 215);
+}
+.detail-container:hover {
+  background-color: rgb(231, 226, 226);
+  transition: 0.5s;
+}
+button {
+  cursor: pointer;
+}
 /* footer {
   position: fixed;
   bottom: 0;

@@ -6,20 +6,30 @@ const CardDetails = (props) => {
   // hook for favorite button
   const [fav, setFav] = useState(true);
   const dispatch = useDispatch();
-  const favorites = useSelector((state) => state.favorites);
-
+  const btnLogic = useSelector((state) => state.btn);
   const addFavBtn = (e) => {
     e.preventDefault();
-
     dispatch({ type: 'ADD', payload: props.id });
     setFav(!fav);
+  };
+  const removeBtn = (e) => {
+    console.log('remove');
+    dispatch({ type: 'REMOVE', payload: props.id });
+    setFav(!fav);
+  };
+  const show = (e) => {
+    console.log(props.id);
   };
 
   return (
     <div>
-      {fav ? <button onClick={addFavBtn}>add</button> : <button>remove</button>}
-      <NavLink to='/details' exact={true}>
-        <button>show more</button>
+      <button onClick={addFavBtn}>add</button>
+      <button onClick={removeBtn}>remove</button>
+      <NavLink
+        to={{ pathname: '/details', state: { id: props.id } }}
+        exact={true}
+      >
+        <button onClick={show}>show more</button>
       </NavLink>
     </div>
   );
