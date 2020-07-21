@@ -22,11 +22,11 @@ const CardDetails = (props) => {
       {!favorite.includes(props.id) ? (
         <button onClick={addFavBtn}>
           Favorite
-          <i class='far fa-star'></i>
+          <i className='far fa-star'></i>
         </button>
       ) : (
         <button onClick={removeBtn}>
-          <i class='fas fa-trash-alt'></i>
+          <i className='fas fa-trash-alt'></i>
         </button>
       )}
       <NavLink

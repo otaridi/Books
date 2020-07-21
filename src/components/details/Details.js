@@ -9,7 +9,18 @@ const Details = (props) => {
   return (
     <div className='detail-container'>
       {book ? (
-        <img src={book.volumeInfo.imageLinks.smallThumbnail} alt='book' />
+        <div className='details-page-card'>
+          <img src={book.volumeInfo.imageLinks.smallThumbnail} alt='book' />
+          <div className='book-details'>
+            <h2>{book.volumeInfo.title}</h2>
+            <p>{book.volumeInfo.authors[0]}</p>
+            <p>Category: {book.volumeInfo.categories[0]}</p>
+            <div>
+              <h3>Description</h3>
+              <p>{book.volumeInfo.description}</p>
+            </div>
+          </div>
+        </div>
       ) : (
         <p></p>
       )}
