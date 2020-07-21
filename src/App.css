@@ -19,6 +19,7 @@ body {
   height: 50px;
   background-color: white;
   border-bottom: 0.1px solid rgb(184, 179, 179);
+  z-index: 11;
 }
 .nav-container > div {
   width: 96%;
@@ -81,29 +82,39 @@ section {
   width: 80%;
   margin-left: 10%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 40px;
 }
 /* CARD */
 .card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   border: 0.5px solid rgb(221, 215, 215);
-  height: 400px;
+  height: 350px;
+  transition: 0.3s;
+}
+.card-description {
+  text-align: center;
 }
 .card-container:hover {
   background-color: rgb(231, 226, 226);
-  transition: 0.5s;
+  box-shadow: -1px 2px 24px 1px rgba(0, 0, 0, 0.75);
+  transition: 0.3s;
 }
 .book-image {
-  height: 80%;
-  margin: auto;
-  padding-top: 20px;
+  padding: 5px;
+  height: 70%;
+  width: 100%;
   display: block;
-  /* width: 100%; */
 }
+
 /* card details */
 .card-details {
-  height: 40px;
-  margin-top: 40px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 35px;
   border: 1px solid rgb(175, 165, 165);
 }
 /* detail page */

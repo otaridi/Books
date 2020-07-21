@@ -16,23 +16,25 @@ const CardDetails = (props) => {
     dispatch({ type: 'REMOVE', payload: props.id });
     setFav(!fav);
   };
-  const show = (e) => {
-    console.log(props.id);
-  };
 
   return (
     <div>
       {!favorite.includes(props.id) ? (
-        <button onClick={addFavBtn}>add</button>
+        <button onClick={addFavBtn}>
+          <i class='fas fa-plus'></i> ADD
+        </button>
       ) : (
-        <button onClick={removeBtn}>remove</button>
+        <button onClick={removeBtn}>
+          <i class='fas fa-trash-alt'></i>
+        </button>
       )}
       <NavLink
         to={{ pathname: '/details', state: { id: props.id } }}
         exact={true}
       >
-        <button onClick={show}>show more</button>
+        <button>show more</button>
       </NavLink>
+      {/* <i class='fas fa-heart' style={{ fontSize: 30, color: "orange" }}></i> */}
     </div>
   );
 };

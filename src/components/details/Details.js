@@ -1,5 +1,4 @@
 import React from 'react';
-import Card from '../home/Card';
 import { useSelector } from 'react-redux';
 
 const Details = (props) => {
@@ -9,7 +8,11 @@ const Details = (props) => {
   const book = bookData.find((el) => el.id === bookId);
   return (
     <div className='detail-container'>
-      {book ? <img src={book.volumeInfo.imageLinks.smallThumbnail} /> : <p></p>}
+      {book ? (
+        <img src={book.volumeInfo.imageLinks.smallThumbnail} alt='book' />
+      ) : (
+        <p></p>
+      )}
     </div>
   );
 };

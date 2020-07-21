@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from './Card';
-import CardDetails from '../CardDetails';
 
 const CardList = ({ bookData }) => {
+  console.log(bookData);
   return (
     <div className='cardlist'>
       {bookData.map((el) => {
@@ -11,7 +11,8 @@ const CardList = ({ bookData }) => {
             <Card
               id={el.id}
               bookImage={el.volumeInfo.imageLinks.smallThumbnail}
-              el={el}
+              author={el.volumeInfo.authors[0]}
+              title={el.volumeInfo.title}
             />
             {/* <CardDetails id={el.id} /> */}
           </div>
