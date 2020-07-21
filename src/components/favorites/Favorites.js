@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Card from '../home/Card';
-import CardDetails from '../CardDetails';
 
 const Favorites = () => {
   const favorites = useSelector((state) => state.favorites);
@@ -18,7 +17,6 @@ const Favorites = () => {
                   bookImage={el.volumeInfo.imageLinks.smallThumbnail}
                   el={el}
                 />
-                {/* <CardDetails id={el.id} /> */}
               </div>
             );
           }

@@ -7,7 +7,7 @@ const Navbar = () => {
   useEffect(() => {
     const scroll = () => {
       const { current } = navbarRef;
-      window.scrollY > 100
+      window.scrollY > 30
         ? current.classList.add('shadow')
         : current.classList.remove('shadow');
     };

@@ -23,6 +23,7 @@ const App = () => {
         throw error;
       });
   }, []);
+  // data from redux
   const bookData = useSelector((state) => state.items);
   return (
     <Router>

@@ -1,13 +1,12 @@
 import React from 'react';
 import CardDetails from '../CardDetails';
-import { useSelector } from 'react-redux';
 
 const Card = (props) => {
   return (
     <div className='card-container'>
       <img src={props.bookImage} alt='book' className='book-image' />
       <div className='card-description'>
-        <h5>{props.author}</h5>
+        <h3>{props.author}</h3>
         <p>{props.title}</p>
       </div>
       <CardDetails id={props.id} />
