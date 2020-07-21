@@ -10,10 +10,7 @@ const Card = (props) => {
         <h5>{props.author}</h5>
         <p>{props.title}</p>
       </div>
-
-      <div className='card-details'>
-        <CardDetails id={props.id} />
-      </div>
+      <CardDetails id={props.id} />
     </div>
   );
 };

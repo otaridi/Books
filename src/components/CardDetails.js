@@ -18,10 +18,11 @@ const CardDetails = (props) => {
   };
 
   return (
-    <div>
+    <div className='card-details'>
       {!favorite.includes(props.id) ? (
         <button onClick={addFavBtn}>
-          <i class='fas fa-plus'></i> ADD
+          Favorite
+          <i class='far fa-star'></i>
         </button>
       ) : (
         <button onClick={removeBtn}>
@@ -34,7 +35,6 @@ const CardDetails = (props) => {
       >
         <button>show more</button>
       </NavLink>
-      {/* <i class='fas fa-heart' style={{ fontSize: 30, color: "orange" }}></i> */}
     </div>
   );
 };

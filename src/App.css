@@ -112,6 +112,8 @@ section {
 /* card details */
 .card-details {
   position: absolute;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   bottom: 0;
   height: 35px;
@@ -130,6 +132,10 @@ section {
 }
 button {
   cursor: pointer;
+  padding: 8px;
+}
+.far {
+  margin-left: 10px;
 }
 /* footer {
   position: fixed;
