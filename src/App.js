@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     axios
       .get(
-        'https://www.googleapis.com/books/v1/volumes?q=subject:fiction&filter=partial'
+        'https://www.googleapis.com/books/v1/volumes?q=subject:science&filter=partial'
       )
       .then((response) => {
         dispatch({ type: 'FETCH_BOOKS', payload: response.data });

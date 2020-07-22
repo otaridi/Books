@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { BrowserRouter as Router, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const CardDetails = (props) => {
   // hook for favorite button
@@ -18,7 +18,6 @@ const CardDetails = (props) => {
     <div className='card-details'>
       {!favorite.includes(props.id) ? (
         <button onClick={addFavBtn} className='addBtn' title='add to favorites'>
-          {/* Favorite */}
           <i className='far fa-star'></i>
         </button>
       ) : (
@@ -27,7 +26,7 @@ const CardDetails = (props) => {
           className='removeBtn'
           title='remove from favorites'
         >
-          <i className='far fa-trash-alt'></i>
+          <i className='fas fa-star' style={{ color: 'red' }}></i>
         </button>
       )}
       <NavLink

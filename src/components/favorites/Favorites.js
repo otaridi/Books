@@ -16,6 +16,8 @@ const Favorites = () => {
                   id={el.id}
                   bookImage={el.volumeInfo.imageLinks.smallThumbnail}
                   el={el}
+                  author={el.volumeInfo.authors[0]}
+                  title={el.volumeInfo.title}
                 />
               </div>
             );

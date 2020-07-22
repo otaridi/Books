@@ -148,25 +148,23 @@ section {
 .addBtn:hover,
 .showBtn:hover {
   background-color: rgb(160, 231, 160);
-  border: 1px solid rgb(8, 49, 8);
+  border: 1px solid rgb(65, 92, 65);
   outline: none;
   border-radius: 2px;
   transition: 0.2s;
 }
 .removeBtn:hover {
-  background-color: rgb(231, 29, 39);
-  border: 1px solid rgb(73, 13, 13);
+  background-color: rgb(233, 155, 159);
+  border: 1px solid rgb(121, 88, 88);
   outline: none;
   border-radius: 2px;
   transition: 0.2s;
 }
-
+/* font awesome icons */
 .far,
 .fas {
-  /* margin-left: 10px; */
   padding: 0 10px;
 }
-
 .fa-star:hover {
   color: rgb(231, 29, 39);
 }
@@ -182,10 +180,9 @@ section {
   max-height: 200px;
 }
 .book-details {
-  /* border: 1px solid red; */
   padding: 10px;
 }
-p {
+.book-details p {
   margin: 10px 0;
 }
 @media only screen and (max-width: 500px) {
@@ -198,8 +195,20 @@ p {
     padding-top: 20px;
   }
 }
-
-/* footer {
-  position: fixed;
-  bottom: 0;
-} */
+/* FOOTER */
+.footer {
+  width: 90%;
+  margin: 100px 5%;
+  border-top: 1px solid gray;
+}
+.footer-info {
+  margin: 30px 0 0 30px;
+}
+.footer-info a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(21, 37, 51);
+}
+.footer-info h5 {
+  margin: 10px 0;
+}
