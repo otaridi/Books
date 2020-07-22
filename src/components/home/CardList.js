@@ -2,7 +2,6 @@ import React from 'react';
 import Card from './Card';
 
 const CardList = ({ bookData }) => {
-  console.log(bookData);
   return (
     <div className='cardlist'>
       {bookData.map((el) => {

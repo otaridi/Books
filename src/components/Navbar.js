@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const navbarRef = useRef();
-
+  // check window scroll
   useEffect(() => {
     const scroll = () => {
       const { current } = navbarRef;

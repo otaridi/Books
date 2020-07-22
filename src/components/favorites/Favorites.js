@@ -5,11 +5,15 @@ import Card from '../home/Card';
 const Favorites = () => {
   const favorites = useSelector((state) => state.favorites);
   const bookData = useSelector((state) => state.items);
+
+  //   filter from booklist with favorite books id
+  const book = bookData.filter((el) => favorites.includes(el.id));
+
   return (
     <div>
       <div className='cardlist'>
-        {bookData.map((el) => {
-          if (favorites.includes(el.id)) {
+        {book.length !== 0 ? (
+          book.map((el) => {
             return (
               <div key={el.id}>
                 <Card
@@ -21,8 +25,10 @@ const Favorites = () => {
                 />
               </div>
             );
-          }
-        })}
+          })
+        ) : (
+          <h4>Your favorites list is empty</h4>
+        )}
       </div>
     </div>
   );

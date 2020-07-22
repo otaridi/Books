@@ -3,14 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
 const CardDetails = (props) => {
-  // hook for favorite button
   const dispatch = useDispatch();
   const favorite = useSelector((state) => state.favorites);
+  // add to favorite
   const addFavBtn = (e) => {
     e.preventDefault();
     dispatch({ type: 'ADD', payload: props.id });
   };
+  // remove from favorite
   const removeBtn = (e) => {
+    e.preventDefault();
     dispatch({ type: 'REMOVE', payload: props.id });
   };
 
@@ -26,7 +28,7 @@ const CardDetails = (props) => {
           className='removeBtn'
           title='remove from favorites'
         >
-          <i className='fas fa-star' style={{ color: 'red' }}></i>
+          <i className='fas fa-star'></i>
         </button>
       )}
       <NavLink

@@ -165,6 +165,9 @@ section {
 .fas {
   padding: 0 10px;
 }
+.fas {
+  color: red;
+}
 .fa-star:hover {
   color: rgb(231, 29, 39);
 }

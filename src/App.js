@@ -22,7 +22,7 @@ const App = () => {
       .catch((error) => {
         throw error;
       });
-  }, []);
+  }, [dispatch]);
   // data from redux
   const bookData = useSelector((state) => state.items);
   return (

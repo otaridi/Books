@@ -1,14 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import CardDetails from '../CardDetails';
 
 const Details = (props) => {
   // book id from redux store
   const bookId = props.location.state.id;
   const bookData = useSelector((state) => state.items);
+  //   find  book from booklist with Navlink props,   navlink from cardDetails component
   const book = bookData.find((el) => el.id === bookId);
 
-  const favorite = useSelector((state) => state.favorites);
   return (
     <div className='detail-container'>
       {book ? (
@@ -31,19 +30,6 @@ const Details = (props) => {
       ) : (
         <p></p>
       )}
-      {/* {!favorite.includes(props.id) ? (
-        <button onClick={addFavBtn} className='addBtn' title='add to favorites'>
-          <i className='far fa-star'></i>
-        </button>
-      ) : (
-        <button
-          onClick={removeBtn}
-          className='removeBtn'
-          title='remove from favorites'
-        >
-          <i className='far fa-trash-alt'></i>
-        </button>
-      )} */}
     </div>
   );
 };
